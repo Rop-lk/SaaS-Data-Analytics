@@ -1,0 +1,5 @@
+Python Scripts
+| File           | Content                            | Post? | Notes                                                          |
+| -------------- | ---------------------------------- | ----- | -------------------------------------------------------------- |
+| load_data.py   | Loads CSVs into SQLite (`saas.db`) | ✅     | Automates database creation without committing the `.db` file. |
+| analysis.ipynb | Pandas analysis, charts, reports   | ✅     | Shows Python skills and analysis workflow.                     |
