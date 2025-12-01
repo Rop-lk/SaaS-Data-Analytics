@@ -31,7 +31,13 @@ This project demonstrates SaaS analytics using SQLite, SQL, and Python (Pandas).
 - Document workflow for GitHub
 
 ## Folder Structure
-
+/SaaS-Data-Analytics
+│ README.md
+│ requirements.txt
+├── sql/
+├── python/
+├── data/
+└── docs/
 
 ## Setup Instructions
 1. Create SQLite DB (`saas.db`) via DataGrip or Python
