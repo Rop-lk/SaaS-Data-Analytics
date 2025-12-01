@@ -1,6 +1,29 @@
-| File                 | Content                                                        | Post? | Notes                                                     |
-| -------------------- | -------------------------------------------------------------- | ----- | --------------------------------------------------------- |
-| schema.sql           | Table creation statements (customers, subscriptions, invoices) | ✅     | Allows anyone to recreate your database.                  |
-| sample_data.sql      | INSERT statements to populate tables with demo SaaS data       | ✅     | Includes only sample/demo data; never real customer info. |
-| analysis_queries.sql | Sample SQL queries (MRR, churn, revenue)                       | ✅     | Shows your analytics skills.                              |
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE customers (
+    customer_id INTEGER PRIMARY KEY,
+    name TEXT,
+    email TEXT,
+    signup_date TEXT
+);
+
+CREATE TABLE subscriptions (
+    subscription_id INTEGER PRIMARY KEY,
+    customer_id INTEGER,
+    plan_name TEXT,
+    price REAL,
+    status TEXT,
+    start_date TEXT,
+    end_date TEXT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+CREATE TABLE invoices (
+    invoice_id INTEGER PRIMARY KEY,
+    customer_id INTEGER,
+    amount REAL,
+    invoice_date TEXT,
+    status TEXT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
 
