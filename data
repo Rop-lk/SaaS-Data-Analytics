@@ -1,0 +1,4 @@
+File	Content	Post?	Notes
+customers.csv	Sample customer data	✅	Only small demo data.
+subscriptions.csv	Sample subscription data	✅	Same, keeps repo small.
+invoices.csv	Sample invoice data	✅	Same, keeps repo small.
