@@ -1,5 +1,18 @@
-Python Scripts
-| File           | Content                            | Post? | Notes                                                          |
-| -------------- | ---------------------------------- | ----- | -------------------------------------------------------------- |
-| load_data.py   | Loads CSVs into SQLite (`saas.db`) | ✅     | Automates database creation without committing the `.db` file. |
-| analysis.ipynb | Pandas analysis, charts, reports   | ✅     | Shows Python skills and analysis workflow.                     |
+load_data.py
+import pandas as pd
+from sqlalchemy import create_engine
+
+# Create SQLite engine
+engine = create_engine("sqlite:///../saas.db")
+
+# Load CSVs
+customers = pd.read_csv("../data/customers.csv")
+subscriptions = pd.read_csv("../data/subscriptions.csv")
+invoices = pd.read_csv("../data/invoices.csv")
+
+# Load into SQLite
+customers.to_sql("customers", engine, if_exists="append", index=False)
+subscriptions.to_sql("subscriptions", engine, if_exists="append", index=False)
+invoices.to_sql("invoices", engine, if_exists="append", index=False)
+
+print("Data loaded into saas.db successfully.")
