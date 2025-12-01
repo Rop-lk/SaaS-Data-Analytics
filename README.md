@@ -40,7 +40,7 @@ This project demonstrates SaaS analytics using SQLite, SQL, and Python (Pandas).
 └── docs/
 
 ## Setup Instructions
-1. Create SQLite DB (`saas.db`) via DataGrip or Python
+1. Create SQLite DB (`saas.db`) via DataGrip
 2. Run `sql/schema.sql` to create tables
 3. Run `sql/sample_data.sql` to insert demo data
 4. Use Python scripts or Jupyter notebook for analysis
