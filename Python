@@ -16,3 +16,8 @@ subscriptions.to_sql("subscriptions", engine, if_exists="append", index=False)
 invoices.to_sql("invoices", engine, if_exists="append", index=False)
 
 print("Data loaded into saas.db successfully.")
+
+analysis.ipynb
+Jupyter Notebook with:
+pd.read_sql queries
+Charts (Matplotlib / Seaborn) for revenue, MRR, churn
